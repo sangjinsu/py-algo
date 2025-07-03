@@ -1,19 +1,15 @@
 # https://www.acmicpc.net/problem/11720
-# 문제: 숫자의 합
-# 난이도: 브론즈4
-# 분류: 구현, 수학
-# 태그: #implementation #math #beginner #string
-# 풀이: 각 자릿수를 하나씩 더함.
-
-import sys
-
+# 문제: 세로 읽기
 if __name__ == '__main__':
-    _ = int(input())
-    numbers = list(map(int, list(input())))
+    row = 5
+    wordList = [input() for _ in range(row)]
+    maxLen = max(map(len, wordList))
 
-    result = 0
-    for number in numbers:
-        result += number
+    result = ""
+    for x in range(maxLen):
+        for y in range(row):
+            if len(wordList[y]) <= x:
+                continue
+            result += wordList[y][x]
 
-    sys.stdout.write(str(result))
-
+    print(result)

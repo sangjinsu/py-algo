@@ -6,7 +6,6 @@
 # 태그: #stack #자료구조기초
 
 import sys
-from os import write
 
 
 class Stack:
